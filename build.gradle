@@ -5,6 +5,10 @@ apply plugin: 'java'
 
 sourceCompatibility = 1.5
 
+wrapper {
+    gradleVersion = "6.7"
+}
+
 task fatJar(type: Jar) {
     manifest {
         attributes 'Implementation-Title': 'JInfoFlow benchmarks',
