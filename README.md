@@ -8,7 +8,7 @@ JInfoFlow-bench is a taint analysis benchmark suite containing 12 plain Java ben
 
 # Benchmarking with the P/Taint and Doop framework
 ```
-./doop --platform java_7 -i <JInfoFlow-bench>/build/libs/JInfoFlow-bench-all-1.0-SNAPSHOT.jar --information-flow minimal --distinguish-all-string-buffers -main <mainclass> -a selective-2-object-sensitive+heap --reflection-high-soundness-mode
+./doop --platform java_7 -i <JInfoFlow-bench>/build/libs/JInfoFlow-bench-all-1.0-SNAPSHOT.jar --information-flow minimal --distinguish-all-string-buffers -main <mainclass> -a selective-2-object-sensitive+heap --reflection-classic --reflection-high-soundness-mode
 ```
 
 
