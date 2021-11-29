@@ -12,10 +12,10 @@ wrapper {
 task fatJar(type: Jar) {
     manifest {
         attributes 'Implementation-Title': 'JInfoFlow benchmarks',
-                'Implementation-Version': version
+                'Implementation-Version': archiveVersion.get()
     }
-    baseName = project.name + '-all'
-    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    archiveBaseName.set(project.name + '-all')
+    from { configurations.runtime.collect { it.isDirectory() ? it : zipTree(it) } }
     with jar
 }
 
